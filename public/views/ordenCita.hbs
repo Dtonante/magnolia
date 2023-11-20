@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vidakids |Home</title>
+
+    <link rel="stylesheet" href="../css/citas/ordenCita.css">
+    {{!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    --}}
+    {{>header}}
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="/" class="site_title">
+                            <h1>Vida<span>kids</span></h1>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>{{nombre}}</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/">Inicio</a></li>
+                                        {{!-- <li><a href="index2.html">Dashboard2</a></li>
+                                        <li><a href="index3.html">Dashboard3</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        {{!-- <li><a href="form.html">General Form</a></li> --}}
+                                        <li><a href="usuarios">usuarios</a></li>
+                                        <li><a href="registrar_Acudiente">Registrar Acudiente</a></li>
+                                        {{!-- <li><a href="form_wizards.html">Form Wizard</a></li>
+                                        <li><a href="form_upload.html">Form Upload</a></li>
+                                        <li><a href="form_buttons.html">Form Buttons</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-desktop"></i> Servicios <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="">Categoria de servicios</a></li>
+                                        <li><a href="eventos">Eventos</a></li>
+                                        <li><a href="">Citas</a></li>
+                                        <li><a href="">Profesionales Voluntarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-table"></i> Donaaciones <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="tables.html">Tables</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i> Ventas <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="chartjs.html">Chart JS</a></li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars" style="color:#f0cc2b;"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/img.jpg" alt="">{{nombre}}
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="javascript:;"> Profile</a>
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <span class="badge bg-red pull-right">50%</span>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a class="dropdown-item" href="javascript:;">Help</a>
+                                    <a class="dropdown-item" href="login"><i class="fa fa-sign-out pull-right"></i>
+                                        Cerrar sesión</a>
+                                </div>
+                            </li>
+
+                            <li role="presentation" class="nav-item dropdown open">
+                                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o " style="color: #f0cc2b;"></i>
+                                    <span class="badge bg-green">6</span>
+                                </a>
+                                <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                                    aria-labelledby="navbarDropdown1">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="text-center">
+                                            <a class="dropdown-item">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="orden-medica">
+                        <h1>Orden Médica</h1>
+                        <form id="ordenMedicaForm" onsubmit="return validarFormulario()">
+                            <div class="columnas">
+                                <div class="columna">
+
+                                     <label for="edad">beneficiario:</label>
+                                    <input type="text" id="edad" name="edad">
+                                    
+
+                                    <label>T.I:</label>
+                                    <input type="text" id="tipoIdentificacion" name="tipoIdentificacion">
+
+                                    <label for="edad">Edad:</label>
+                                    <input type="text" id="edad" name="edad">
+
+                                    <label for="sexoBiologico">Sexo Biológico:</label>
+                                    <input type="text" id="sexoBiologico" name="sexoBiologico">
+
+
+
+                                </div>
+                                <div class="columna">
+
+
+                                    <label for="cuidadorPrincipal">Cuidador Principal:</label>
+                                    <input type="text" id="cuidadorPrincipal" name="cuidadorPrincipal">
+
+                                    <label for="cedulaCuidador">C.C del Cuidador:</label>
+                                    <input type="text" id="cedulaCuidador" name="cedulaCuidador">
+
+                                    <label for="parentesco">Parentesco:</label>
+                                    <input type="text" id="parentesco" name="parentesco">
+
+                                    <label for="nroContacto">Nro. Contacto:</label>
+                                    <input type="text" id="nroContacto" name="nroContacto">
+                                </div>
+                            </div>
+
+                            <div class="cajon">
+                                <h2>Datos Adicionales</h2>
+                                <div class="columnas">
+                                    <div class="columna">
+                                        <label for="eps">EPS:</label>
+                                        <select id="eps" name="eps">
+                                            <option value="">Selecciona una EPS</option>
+                                            <option value="EPS1">EPS 1</option>
+                                            <option value="EPS2">EPS 2</option>
+                                        </select>
+
+                                        <label for="servicio">Servicio:</label>
+                                        <select id="servicio" name="servicio">
+                                            <option value="">Selecciona un servicio</option>
+                                            <option value="Servicio1">Servicio 1</option>
+                                            <option value="Servicio2">Servicio 2</option>
+                                        </select>
+
+                                        <label for="entidadRemision">Entidad de Remisión:</label>
+                                        <select id="entidadRemision" name="entidadRemision">
+                                            <option value="">Selecciona una entidad de remisión</option>
+                                            <option value="Entidad1">Entidad 1</option>
+                                            <option value="Entidad2">Entidad 2</option>
+                                        </select>
+
+                                        <label for="telefono">Teléfono:</label>
+                                        <input type="text" id="telefono" name="telefono">
+
+                                        <label for="telefono">Diagnostico Principal:</label>
+                                        <input type="text" id="telefono" name="telefono">
+
+                                    </div>
+
+                                    <div class="columna">
+                                        <label for="telefono">Direccion:</label>
+                                        <input type="text" id="telefono" name="telefono">
+
+
+                                        <label for="sesion">Sesión:</label>
+                                        <input type="text" id="sesion" name="sesion">
+
+                                        <label for="nroAutorizacion">Nro. Autorización:</label>
+                                        <input type="text" id="nroAutorizacion" name="nroAutorizacion">
+
+                                        <label for="fechaAutorizacion">Fecha Autorización:</label>
+                                        <input type="text" id="fechaAutorizacion" name="fechaAutorizacion">
+
+
+                                    </div>
+                                </div>
+                                <label for="observaciones">Observaciones:</label>
+                                <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+
+
+                            </div>
+
+
+                            <div class="botones">
+                                <button type="submit">Generar Orden</button>
+                                <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                    <script src="../js/citas/ordenCita.js"></script>
+                </div>
+            </div>
+
+
+
+            {{!-- funcion expor excel --}}
+            {{!--
+            <script type="text/javascript">
+                function exportReportToExcel() {
+                    let table = document.getElementsByID("table");
+                    TableToExcel.convert(table[0], {
+                        name: `file.xlsx`,
+                        sheet: {
+                            name: 'Sheet 1'
+                        }
+                    });
+                }
+            </script> --}}
+
+            {{!-- <div>
+                <div class="formulario">
+                    <h1 class="titulo_formulario">FORMULARIO</h1>
+                    <form action="" id="form">
+                        <div class="formulario_bloque-uno">
+                            <div class="input-control">
+                                <label for="text">text</label>
+                                <input type="text" name="" id="text">
+                                <div class="error"></div>
+                            </div>
+
+
+
+                            <div class="input-control">
+                                <label for="email">email</label>
+                                <input type="email" name="" id="email">
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="input-control">
+                                <label for="pass">password</label>
+                                <input type="password" name="" id="pass">
+                                <div class="error"></div>
+                            </div>
+                        </div>
+
+                        <div class="formulario_bloque-dos">
+                            <div class="input-control">
+                                <label for="datetime">datetime</label>
+                                <input type="datetime-local" name="" id="datetime">
+                                <div class="error"></div>
+                            </div>
+
+
+                            <div class="input-control">
+                                <label for="textarea">textarea</label>
+                                <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                                <div class="error"></div>
+                            </div>
+
+
+                            <div class="input-control">
+                                <label for="select">select</label>
+                                <select name="" id="select">
+                                    <option value="seleccionar">seleccionar</option>
+                                    <option value="1">1</option>
+                                </select>
+                                <div class="error"></div>
+                            </div>
+
+
+                        </div>
+                        <button type="submit" class="boton" name="" id="boton">evniar</button>
+                    </form>
+                </div>
+                <script src="/public/js/citas/ordenCita.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+
+            </div> --}}
+
+            <!-- /page content -->
+            {{>footer}}
+
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+
+</body>
+
+</html>

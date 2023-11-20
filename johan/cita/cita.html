@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cita.css">
+    <title>Orden Médica</title>
+</head>
+<body>
+    <div class="orden-medica">
+        <h1>Orden Médica</h1>
+        <form id="ordenMedicaForm" onsubmit="return validarFormulario()">
+            <div class="columnas">
+                <div class="columna" id="datosAdicionales">
+                    <label for="beneficiario">Beneficiario:</label>
+                    <p id="pBeneficiario">Beneficiario1</p>
+
+                    <label for="tipoIdentificacion">T.I:</label>
+                    <p id="pTipoIdentificacion">123456789</p>
+
+                    <label for="edad">Edad:</label>
+                    <p id="pEdad">30</p>
+
+                    <label for="sexoBiologico">Sexo Biológico:</label>
+                    <p id="pSexoBiologico">Femenino</p>
+
+                    <label for="cuidadorPrincipal">Cuidador Principal:</label>
+                    <p id="pCuidadorPrincipal">Juan Pérez</p>
+
+                    <label for="cedulaCuidador">C.C del Cuidador:</label>
+                    <p id="pCedulaCuidador">987654321</p>
+
+                    <label for="parentesco">Parentesco:</label>
+                    <p id="pParentesco">Familiar</p>
+
+                    <label for="nroContacto">Nro. Contacto:</label>
+                    <p id="pNroContacto">555-1234</p>
+                </div>
+            </div>
+
+            <div class="cajon">
+                <h2>Datos de Cita</h2>
+                <div class="columnas">
+                    <div class="columna">
+                        <label for="fechaCita">Fecha de Cita:</label>
+                        <input type="text" id="fechaCita" name="fechaCita" required>
+                    </div>
+
+                    <div class="columna">
+                        <label for="profesionalEPS">Profesional de EPS:</label>
+                        <input type="text" id="profesionalEPS" name="profesionalEPS" required>
+
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado" required>
+                    </div>
+                </div>
+
+                <label for="sesionCita">Sesión de Cita:</label>
+                <input type="text" id="sesionCita" name="sesionCita" required>
+
+                <label for="observacionesCita">Observaciones de Cita:</label>
+                <textarea id="observacionesCita" name="observacionesCita" rows="4"></textarea>
+            </div>
+
+            <div class="botones">
+                <button type="submit">Generar Orden</button>
+                <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./citas.js"></script>
+</body>
+</html>

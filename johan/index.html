@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Orden de Cita Médica</title>
+</head>
+<body>
+    <div class="cita">
+        <h1>Orden de Cita Médica</h1>
+        <form id="citaForm">
+            <label for="paciente">Paciente:</label>
+            <input type="text" id="paciente" name="paciente" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="text" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="text" id="hora" name="hora" required>
+
+            <label for="medico">Médico:</label>
+            <input type="text" id="medico" name="medico" required>
+
+            <label for="departamento">Departamento:</label>
+            <input type="text" id="departamento" name="departamento" required>
+
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" required>
+
+            <input type="submit" value="Generar Orden">
+        </form>
+        <div id="ordenGenerada"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Orden Médica</title>
+</head>
+<body>
+    <div class="orden-medica">
+        <h1>Orden Médica</h1>
+        <form id="ordenMedicaForm" onsubmit="return validarFormulario()">
+            <div class="columnas">
+                <div class="columna">
+                    <label for="beneficiario">Beneficiario:</label>
+                    <select id="beneficiario" name="beneficiario" required>
+                        <option value="">Selecciona un beneficiario</option>
+                        <option value="Beneficiario1">Beneficiario 1</option>
+                        <option value="Beneficiario2">Beneficiario 2</option>
+                    </select>
+
+                    <label for="tipoIdentificacion">T.I:</label>
+                    <input type="text" id="tipoIdentificacion" name="tipoIdentificacion" required>
+
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" required>
+
+                    <label for="sexoBiologico">Sexo Biológico:</label>
+                    <input type="text" id="sexoBiologico" name="sexoBiologico" required>
+
+                    <label for="cuidadorPrincipal">Cuidador Principal:</label>
+                    <input type="text" id="cuidadorPrincipal" name="cuidadorPrincipal" required>
+
+                    <label for="cedulaCuidador">C.C del Cuidador:</label>
+                    <input type="text" id="cedulaCuidador" name="cedulaCuidador" required>
+
+                    <label for="parentesco">Parentesco:</label>
+                    <input type="text" id="parentesco" name="parentesco" required>
+
+                    <label for="nroContacto">Nro. Contacto:</label>
+                    <input type="text" id="nroContacto" name="nroContacto" required>
+                </div>
+            </div>
+
+            <div class="cajon">
+                <h2>Datos Adicionales</h2>
+                <div class="columnas">
+                    <div class="columna">
+                        <label for="eps">EPS:</label>
+                        <select id="eps" name="eps" required>
+                            <option value="">Selecciona una EPS</option>
+                            <option value="EPS1">EPS 1</option>
+                            <option value="EPS2">EPS 2</option>
+                        </select>
+
+                        <label for="servicio">Servicio:</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="Servicio1">Servicio 1</option>
+                            <option value="Servicio2">Servicio 2</option>
+                        </select>
+
+                        <label for="entidadRemision">Entidad de Remisión:</label>
+                        <select id="entidadRemision" name="entidadRemision" required>
+                            <option value="">Selecciona una entidad de remisión</option>
+                            <option value="Entidad1">Entidad 1</option>
+                            <option value="Entidad2">Entidad 2</option>
+                        </select>
+                    </div>
+
+                    <div class="columna">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" required>
+
+                        <label for="sesion">Sesión:</label>
+                        <input type="text" id="sesion" name="sesion" required>
+
+                        <label for="nroAutorizacion">Nro. Autorización:</label>
+                        <input type="text" id="nroAutorizacion" name="nroAutorizacion" required>
+
+                        <label for="fechaAutorizacion">Fecha Autorización:</label>
+                        <input type="text" id="fechaAutorizacion" name="fechaAutorizacion" required>
+
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botones">
+                <button type="submit">Generar Orden</button>
+                <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

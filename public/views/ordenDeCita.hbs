@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vidakids |Home</title>
+
+    <link rel="stylesheet" href="../css/citas/ordenDeCita.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    {{!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    --}}
+    {{>header}}
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="/" class="site_title">
+                            <h1>Vida<span>kids</span></h1>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>{{nombre}}</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/">Inicio</a></li>
+                                        {{!-- <li><a href="index2.html">Dashboard2</a></li>
+                                        <li><a href="index3.html">Dashboard3</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        {{!-- <li><a href="form.html">General Form</a></li> --}}
+                                        <li><a href="usuarios">usuarios</a></li>
+                                        <li><a href="registrar_Acudiente">Registrar Acudiente</a></li>
+                                        {{!-- <li><a href="form_wizards.html">Form Wizard</a></li>
+                                        <li><a href="form_upload.html">Form Upload</a></li>
+                                        <li><a href="form_buttons.html">Form Buttons</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-desktop"></i> Servicios <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="">Categoria de servicios</a></li>
+                                        <li><a href="eventos">Eventos</a></li>
+                                        <li><a href="">Citas</a></li>
+                                        <li><a href="">Profesionales Voluntarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-table"></i> Donaaciones <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="tables.html">Tables</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i> Ventas <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="chartjs.html">Chart JS</a></li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars" style="color:#f0cc2b;"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/img.jpg" alt="">{{nombre}}
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="javascript:;"> Profile</a>
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <span class="badge bg-red pull-right">50%</span>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a class="dropdown-item" href="javascript:;">Help</a>
+                                    <a class="dropdown-item" href="login"><i class="fa fa-sign-out pull-right"></i>
+                                        Cerrar sesión</a>
+                                </div>
+                            </li>
+
+                            <li role="presentation" class="nav-item dropdown open">
+                                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o " style="color: #f0cc2b;"></i>
+                                    <span class="badge bg-green">6</span>
+                                </a>
+                                <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                                    aria-labelledby="navbarDropdown1">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="text-center">
+                                            <a class="dropdown-item">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+
+                    <form action="" class="formulario" id="formulario">
+
+                        <div class="columnas">
+                            <div class="columna">
+                                <!-- Grupo: beneficiario -->
+                                <div class="formulario__grupo" id="grupo__beneficiario">
+                                    <label for="beneficiario" class="formulario__label">Beneficiario</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="beneficiario"
+                                            id="beneficiario" placeholder="johan cañola">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo no puede contener numeros</p>
+                                </div>
+
+                                <!-- Grupo: targetaIdentidad -->
+                                <div class="formulario__grupo" id="grupo__targetaIdentidad">
+                                    <label for="targetaIdentidad" class="formulario__label">Targeta De Identidad</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="targetaIdentidad"
+                                            id="targetaIdentidad" placeholder="0000000000">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo no puede contener letras.</p>
+                                </div>
+
+                                <!-- Grupo: fechaNacimiento -->
+                                <div class="formulario__grupo" id="grupo__fechaNacimiento">
+                                    <label for="fechaNacimiento" class="formulario__label">Fecha De Nacimiento</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="fechaNacimiento"
+                                            id="fechaNacimiento" placeholder="dd/mm/yy">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo targeta de identidad no puede contener
+                                        letras.
+                                    </p>
+                                </div>
+
+                                <!-- Grupo: sexoBiologico -->
+                                <div class="formulario__grupo" id="grupo__sexoBiologico">
+                                    <label for="sexoBiologico" class="formulario__label">Sexo Biologico</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="sexoBiologico"
+                                            id="sexoBiologico" placeholder="Masculino/Femenino">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo no puede contener numeros.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="columna">
+
+                                <!-- Grupo: cuidadorPrincipal -->
+                                <div class="formulario__grupo" id="grupo__cuidadorPrincipal">
+                                    <label for="cuidadorPrincipal" class="formulario__label">Cuidador Principal</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="cuidadorPrincipal"
+                                            id="cuidadorPrincipal" placeholder="juaquin Montes">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El nombre del cuidador no puede contener
+                                        numericos.</p>
+                                </div>
+
+                                <!-- Grupo: cedulaCuidador -->
+                                <div class="formulario__grupo" id="grupo__cedulaCuidador">
+                                    <label for="cedulaCuidador" class="formulario__label">Cedula Cuidador</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="cedulaCuidador"
+                                            id="cedulaCuidador" placeholder="0000000000">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo no puede contener letras.</p>
+                                </div>
+
+                                <!-- Grupo: parentesco -->
+                                <div class="formulario__grupo" id="grupo__parentesco">
+                                    <label for="parentesco" class="formulario__label">Parentesco </label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="parentesco" id="parentesco"
+                                            placeholder="Abuelo">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo no puede contener numeros.</p>
+                                </div>
+
+                                <!-- Grupo: numeroContacto -->
+                                <div class="formulario__grupo" id="grupo__numeroContacto">
+                                    <label for="numeroContacto" class="formulario__label">Numero De Contacto</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="formulario__input" name="numeroContacto"
+                                            id="numeroContacto" placeholder="3127351198">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-error">El campo no puede contener letras. </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cajon">
+                            <div class="columnas">
+                                <div class="columna">
+
+                                    <!-- Grupo: eps -->
+                                    <div class="formulario__grupo" id="grupo__eps">
+                                        <label for="eps" class="formulario__label">Eps</label>
+                                        <div class="formulario__grupo-input">
+                                            <select id="eps" name="eps">
+                                                <option value="">Selecciona una EPS</option>
+                                                <option value="EPS1">EPS 1</option>
+                                                <option value="EPS2">EPS 2</option>
+
+                                            </select>
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Selecciona algo</p>
+                                    </div>
+
+                                    <!-- Grupo: Servicio -->
+                                    <div class="formulario__grupo" id="grupo__Servicio">
+                                        <label for="Servicio" class="formulario__label">Servicio</label>
+                                        <div class="formulario__grupo-input">
+                                            <select id="Servicio" name="Servicio">
+                                                <option value="">Selecciona una Servicio</option>
+                                                <option value="EPS1">EPS 1</option>
+                                                <option value="EPS2">EPS 2</option>
+
+                                            </select>
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Seleccione un servicio</p>
+                                    </div>
+
+                                    <!-- Grupo: entidadRemision -->
+                                    <div class="formulario__grupo" id="grupo__entidadRemision">
+                                        <label for="entidadRemision" class="formulario__label">Entidad De Remision</label>
+                                        <div class="formulario__grupo-input">
+                                            <select id="entidadRemision" name="entidadRemision">
+                                                <option value="">Selecciona una entidad de remision</option>
+                                                <option value="EPS1">EPS 1</option>
+                                                <option value="EPS2">EPS 2</option>
+
+                                            </select>
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Selecciona algo</p>
+                                    </div>
+
+
+
+                                    <!-- Grupo: telefono -->
+                                    <div class="formulario__grupo" id="grupo__telefono">
+                                        <label for="telefono" class="formulario__label">Telefono</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="telefono" id="telefono"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+
+                                     <!-- Grupo: diagnosticoPrincipal -->
+                                    <div class="formulario__grupo" id="grupo__diagnosticoPrincipal">
+                                        <label for="diagnosticoPrincipal" class="formulario__label">Diagnostico Principal</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="diagnosticoPrincipal" id="diagnosticoPrincipal"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+
+
+
+
+                                </div>
+
+                                <div class="columna">
+                                     <!-- Grupo: direccion -->
+                                    <div class="formulario__grupo" id="grupo__direccion">
+                                        <label for="direccion" class="formulario__label">Direccion</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="direccion" id="direccion"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+
+                                     <!-- Grupo: sesion -->
+                                    <div class="formulario__grupo" id="grupo__sesion">
+                                        <label for="sesion" class="formulario__label">Sesion</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="sesion" id="sesion"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+
+                                     <!-- Grupo: numeroAutorizacion -->
+                                    <div class="formulario__grupo" id="grupo__numeroAutorizacion">
+                                        <label for="numeroAutorizacion" class="formulario__label">Numero De Autorizacion</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="numeroAutorizacion" id="numeroAutorizacion"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+
+                                     <!-- Grupo: fechaAutorizacion -->
+                                    <div class="formulario__grupo" id="grupo__fechaAutorizacion">
+                                        <label for="fechaAutorizacion" class="formulario__label">Fecha De Autorizacion</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="fechaAutorizacion" id="fechaAutorizacion"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Grupo: observaciones -->
+                                    <div class="formulario__grupo" id="grupo__observaciones">
+                                        <label for="observaciones" class="formulario__label">Observaciones</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="observaciones" id="observaciones"
+                                                placeholder="john123">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                            solo puede
+                                            contener numeros, letras y guion bajo.</p>
+                                    </div>
+                        </div>
+
+
+
+                        {{!-- <!-- Grupo: Usuario -->
+                        <div class="formulario__grupo" id="grupo__usuario">
+                            <label for="usuario" class="formulario__label">Usuario</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="usuario" id="usuario"
+                                    placeholder="john123">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y
+                                solo puede
+                                contener numeros, letras y guion bajo.</p>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- Grupo: Contraseña -->
+                        <div class="formulario__grupo" id="grupo__password">
+                            <label for="password" class="formulario__label">Contraseña</label>
+                            <div class="formulario__grupo-input">
+                                <input type="password" class="formulario__input" name="password" id="password">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                        </div>
+
+                        <!-- Grupo: Contraseña 2 -->
+                        <div class="formulario__grupo" id="grupo__password2">
+                            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                            <div class="formulario__grupo-input">
+                                <input type="password" class="formulario__input" name="password2" id="password2">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                        </div>
+
+                        <!-- Grupo: Correo Electronico -->
+                        <div class="formulario__grupo" id="grupo__correo">
+                            <label for="correo" class="formulario__label">Correo Electrónico</label>
+                            <div class="formulario__grupo-input">
+                                <input type="email" class="formulario__input" name="correo" id="correo"
+                                    placeholder="correo@correo.com">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos,
+                                guiones y guion bajo.</p>
+                        </div>
+
+                        <!-- Grupo: Teléfono -->
+                        <div class="formulario__grupo" id="grupo__telefono">
+                            <label for="telefono" class="formulario__label">Teléfono</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="telefono" id="telefono"
+                                    placeholder="4491234567">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son
+                                14 dígitos.</p>
+                        </div> --}}
+
+                        <!-- Grupo: Terminos y Condiciones -->
+                        <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                                Acepto los Terminos y Condiciones
+                            </label>
+                        </div>
+
+                        <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                                correctamente. </p>
+                        </div>
+
+                        <div class="formulario__grupo formulario__grupo-btn-enviar">
+                            <button type="submit" class="formulario__btn">Enviar</button>
+                            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
+                                exitosamente!</p>
+                        </div>
+                    </form>
+
+                    {{!-- <div class="orden-medica">
+                        <h1>Orden Médica</h1>
+                        <form id="ordenMedicaForm" onsubmit="return validarFormulario()">
+                            <div class="columnas">
+                                <div class="columna">
+
+                                    <label for="edad">beneficiario:</label>
+                                    <input type="text" id="edad" name="edad">
+
+
+                                    <label>T.I:</label>
+                                    <input type="text" id="tipoIdentificacion" name="tipoIdentificacion">
+
+                                    <label for="edad">Edad:</label>
+                                    <input type="text" id="edad" name="edad">
+
+                                    <label for="sexoBiologico">Sexo Biológico:</label>
+                                    <input type="text" id="sexoBiologico" name="sexoBiologico">
+
+
+
+                                </div>
+                                <div class="columna">
+
+
+                                    <label for="cuidadorPrincipal">Cuidador Principal:</label>
+                                    <input type="text" id="cuidadorPrincipal" name="cuidadorPrincipal">
+
+                                    <label for="cedulaCuidador">C.C del Cuidador:</label>
+                                    <input type="text" id="cedulaCuidador" name="cedulaCuidador">
+
+                                    <label for="parentesco">Parentesco:</label>
+                                    <input type="text" id="parentesco" name="parentesco">
+
+                                    <label for="nroContacto">Nro. Contacto:</label>
+                                    <input type="text" id="nroContacto" name="nroContacto">
+                                </div>
+                            </div>
+
+                            <div class="cajon">
+                                <h2>Datos Adicionales</h2>
+                                <div class="columnas">
+                                    <div class="columna">
+                                        <label for="eps">EPS:</label>
+                                        <select id="eps" name="eps">
+                                            <option value="">Selecciona una EPS</option>
+                                            <option value="EPS1">EPS 1</option>
+                                            <option value="EPS2">EPS 2</option>
+                                        </select>
+
+                                        <label for="servicio">Servicio:</label>
+                                        <select id="servicio" name="servicio">
+                                            <option value="">Selecciona un servicio</option>
+                                            <option value="Servicio1">Servicio 1</option>
+                                            <option value="Servicio2">Servicio 2</option>
+                                        </select>
+
+                                        <label for="entidadRemision">Entidad de Remisión:</label>
+                                        <select id="entidadRemision" name="entidadRemision">
+                                            <option value="">Selecciona una entidad de remisión</option>
+                                            <option value="Entidad1">Entidad 1</option>
+                                            <option value="Entidad2">Entidad 2</option>
+                                        </select>
+
+                                        <label for="telefono">Teléfono:</label>
+                                        <input type="text" id="telefono" name="telefono">
+
+                                        <label for="telefono">Diagnostico Principal:</label>
+                                        <input type="text" id="telefono" name="telefono">
+
+                                    </div>
+
+                                    <div class="columna">
+                                        <label for="telefono">Direccion:</label>
+                                        <input type="text" id="telefono" name="telefono">
+
+
+                                        <label for="sesion">Sesión:</label>
+                                        <input type="text" id="sesion" name="sesion">
+
+                                        <label for="nroAutorizacion">Nro. Autorización:</label>
+                                        <input type="text" id="nroAutorizacion" name="nroAutorizacion">
+
+                                        <label for="fechaAutorizacion">Fecha Autorización:</label>
+                                        <input type="text" id="fechaAutorizacion" name="fechaAutorizacion">
+
+
+                                    </div>
+                                </div>
+                                <label for="observaciones">Observaciones:</label>
+                                <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+
+
+                            </div>
+
+
+                            <div class="botones">
+                                <button type="submit">Generar Orden</button>
+                                <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                    <script src="../js/citas/ordenCita.js"></script> --}}
+                </div>
+            </div>
+            <script src="../js/citas/ordenDeCita.js"></script>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+            <!-- /page content -->
+            {{>footer}}
+
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+
+</body>
+
+</html>

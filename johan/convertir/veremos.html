@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ 
+<title>Formulario con JavaScript</title>
+
+</
+</head>
+<body>
+
+    <h2>Formulario</h2>
+
+    <form id="miFormulario">
+        
+ 
+<label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea><br>
+
+        <button type="button" onclick="mostrarDatos()">Mostrar Datos</button>
+    </form>
+
+    <h2>Datos Ingresados</h2>
+    <div id="datosMostrados"></div>
+
+    <script>
+        function mostrarDatos() {
+            // Obtener los valores de los campos
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            // Crear párrafos con los valores
+            var parrafoNombre = document.createElement('p');
+            parrafoNombre.textContent = 'Nombre: ' + nombre;
+
+            var parrafoEmail = document.createElement('p');
+            parrafoEmail.textContent = 'Email: ' + email;
+
+            var parrafoMensaje = document.createElement('p');
+            parrafoMensaje.textContent = 'Mensaje: ' + mensaje;
+
+            // Obtener el contenedor donde se mostrarán los datos
+            var contenedorDatos = document.getElementById('datosMostrados
+
+        function mostrarDatos() {
+            // Obtener los valores de los campos
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            // Crear párrafos con los valores
+            var parrafoNombre = document.createElement('p');
+            parrafoNombre.textContent = 'Nombre: ' + nombre;
+
+            var parrafoEmail = document.createElement('p');
+            parrafoEmail.textContent = 'Email: ' + email;
+
+            var parrafoMensaje = document.createElement('p');
+            parrafoMensaje.textContent = 'Mensaje: ' + mensaje;
+
+            // Obtener el contenedor donde se mostrarán los datos
+            var contenedorDatos = document.getElementById('datosMostr
+
+        function mostrarDatos() {
+            // Obtener los valores de los campos
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            // Crear párrafos con los valores
+            var parrafoNombre = document.createElement('p');
+            parrafoNombre.textContent = 'Nombre: ' + nombre;
+
+            var parrafoEmail = document.createElement('p');
+            parrafoEmail.textContent = 'Email: ' + email;
+
+            var parrafoMensaje = document.createElement('p');
+            parrafoMensaje.textContent = 'Mensaje: ' + mensaje;
+
+            // Obtener el contenedor donde se mostrarán los datos
+            var contenedorDatos = document.getElementById('datosMostrados');
+
+            // Limpiar el contenido anterior
+            contenedorDatos.innerHTML = '';
+
+            // Agregar los párrafos al contenedor
+            contenedorDatos.appendChild(parrafoNombre);
+            contenedorDatos.appendChild(parrafoEmail);
+            contenedorDatos.appendChild(parrafoMensaje);
+        }
+    </script>
+
+</body>
+</html>

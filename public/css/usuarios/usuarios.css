@@ -1,0 +1,27 @@
+.encabezado{
+    display: flex;
+}
+.packBuscar{
+    margin-left: 60%;
+    margin-top: 20px;
+
+}
+.buscar{
+    height: 38.5px;
+}
+
+.tablaUsuarios table{
+    font-size: 20px;
+}
+.tablaUsuarios h2{
+    font-size: 45px;
+    text-align: center;
+}
+.tablaUsuarios span{
+    font-size: 25px;   
+}
+.icono{
+    margin-left: 15px;
+    width: 70px;
+    height: 70px;
+}

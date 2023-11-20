@@ -1,0 +1,139 @@
+.pagination {
+  display: inline;
+  float: right;
+  margin-top: 515px;
+}
+
+.pagination a,
+.pagination button {
+  color: #000000;
+  padding: 8px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 2px;
+
+
+}
+
+.pagination a:hover,
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+#currentPage {
+  font-size: 15px;
+
+}
+
+
+.table {
+
+  margin: 0 auto;
+  position: absolute;
+  margin-top: 130px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  border: 0 solid #111111;
+
+
+
+}
+
+.table th {
+  color: #e7e2e2;
+}
+
+.th_center {
+  text-align: center;
+
+}
+
+/* .titulo_s {
+  margin-left: 120px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+} */
+
+.opc_edit,
+.opc_delete,
+.opc_eyes {
+  width: 25px;
+}
+
+.icon_add {
+  width: 55px;
+  margin-left: 45px;
+  margin-top: -70px;
+}
+
+/* .search_icon {
+  width: 100px;
+  margin-left: 100px;
+  margin-top: -50px;
+  display: flex;
+  float: right;
+
+} */
+
+#search {
+
+  border-radius: 5px;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.Opciones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dow_excel {
+  margin-left: -10.6%;
+  position: relative;
+  margin-top: 473px;
+  float: left;
+}
+
+.boton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.boton:hover {
+  background-color: #0056b3;
+}
+
+
+/* jeje */
+.encabezado{
+  display: flex;
+  margin-top:  50px ;
+  
+}
+.packBuscar{
+  margin-left: 73%;
+
+}
+.buscar{
+  height: 38.5px;
+}
+
+
+
+
+.icono{
+  margin-left: 15px;
+  width: 70px;
+  height: 70px;
+}

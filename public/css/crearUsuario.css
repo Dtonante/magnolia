@@ -1,0 +1,26 @@
+.centrar{
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.contenedorFormulario{
+    background-color: white;
+    margin-left: 12%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.formulario{
+    margin: 5px;
+    font-size: 25px;
+}
+.columnas {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+input, select{
+    width: 300px;
+}
+
+
